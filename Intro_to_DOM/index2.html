@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector Demo</title>
+</head>
+<body>
+    <h1 id="mainHeading">Hello, World!</h1>
+    <p class="description">This is a paragraph.</p>
+    <button id="changeText">Change Text</button>
+
+    <script>
+        document.querySelector("#changeText").addEventListener("click", function() {
+            let paragraph = document.querySelector(".description");
+            paragraph.innerHTML = "The text has been changed";
+            let heading = document.querySelector("#mainHeading");
+            heading.innerHTML="Goodbye, World!"      
+            let button = document.querySelector("button");
+            button.innerHTML="press again"
+        });
+
+        console.log(".description");
+        console.log("#mainHeading");
+        console.log("button");
+    </script>
+</body>
+</html>
